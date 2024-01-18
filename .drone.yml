@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: precommit
+    image: python:3.10
+    commands:
+      - pip install pre-commit
+      - pre-commit run --all-files -vv

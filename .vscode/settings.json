@@ -1,0 +1,28 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.tree.indent": 20,
+    "editor.minimap.renderCharacters": false,
+    //flake8
+    "flake8.args": [
+        "--max-line-length",
+        "88",
+        "--ignore",
+        // top level import
+        "E402",
+        "--extend-ignore",
+        // line breaks in the front sentence
+        "W503"
+    ],
+    // formatter: black
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.formatOnSave": true,
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "88",
+    ],
+}
