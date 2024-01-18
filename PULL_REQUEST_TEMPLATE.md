@@ -1,4 +1,4 @@
-# Watson+Holmes PR Template
+# PR Template
 
 Dankjewel voor de PR! Gelieve de onderstaande checklist te controleren:
 
@@ -11,9 +11,6 @@ Dankjewel voor de PR! Gelieve de onderstaande checklist te controleren:
    - [ ] Toelichting van arbitraire waarden
    - [ ] Inline comments
    - [ ] Toelichting van kolommen
-     - [ ] De kolom 'jaar' is vrij duidelijk, dus behoeft geen uitleg
-     - [ ] De kolom 'procentuele daling' behoeft dat wel. Wat is de basis van wanneer die gedaald is?
-     - [ ] De kolom 'HuurwaardeM2' behoeft uitleg. Hoe is die tot stand gekomen? Komt het uit het AVM, gebaseerd op transacties, of beiden? Is het per maand, per jaar, per M2 per jaar?
 
 ## 2. Algemeen
    - [ ] Code zonder syntax errors
@@ -45,8 +42,6 @@ Dankjewel voor de PR! Gelieve de onderstaande checklist te controleren:
 ## 4. SQL specifiek
    - [ ] Gebruik van SQL Formatter
      - [ ] [Poor SQL Formatter](https://poorsql.com/)
-   - [ ] Juiste kolomnamen
-     - [ ] [SQL Database Templates](https://git.watsonholmes.nl/WatsonHolmes/SqlDatabase/src/branch/main/General/Templates)
    - [ ] Juiste kolom volgorde. Eerst keys, (eventuele) belangrijke kolommen, alfabetisch, modifydate
    - [ ] Correct create statement
      - [ ] Primary key zinvol en integer?
@@ -54,9 +49,8 @@ Dankjewel voor de PR! Gelieve de onderstaande checklist te controleren:
    - [ ] Focus op runtijd voor views
      - [ ] Extra focus op runtijd
 
-
 ## 5. Python specifiek
-   - [ ] PEP 8-naleving (flake8 / ruff)
+   - [ ] PEP 8-naleving (ruff)
    - [ ] Aanwezigheid van docstrings
    - [ ] Gesorteerde imports (isort)
    - [ ] Robuustheid met tests
@@ -70,7 +64,3 @@ Dankjewel voor de PR! Gelieve de onderstaande checklist te controleren:
 
 ## 6. Overig
     - [ ] Extra nadruk op uitlegbare code
-
-## 7. Duidelijke beschrijving na de PR
-   - [ ] Moet de query gescheduled worden? Zoja, wanneer en met welke frequentie?
-   - [ ] Eenmalig runnen op SQL02?
