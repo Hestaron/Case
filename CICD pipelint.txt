@@ -1,0 +1,11 @@
+formatting (ruff)
+linting (ruff)
+
+run unit tests
+run e2e tests
+
+check for vulnerabilities in requirements
+
+Try to build the docker image
+try to run docker image
+
