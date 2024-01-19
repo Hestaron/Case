@@ -42,7 +42,7 @@ def scoring(y_test, y_pred):
 
 
 # read data
-df_raw = pd.read_feather("../../data/processed/data-set.ftr")
+df_raw = pd.read_feather("data/processed/data-set.ftr")
 
 features = [
     "income",
@@ -74,12 +74,12 @@ with mlflow.start_run(experiment_id=exp_id):
     # Scoring
     accuracy, precision, recall, f1 = scoring(y_test, xgb_y_pred)
 
-    mlflow.sklearn.log_model(xgb_model, "Catboost_model")
+    mlflow.sklearn.log_model(xgb_model, "xgb_model")
     metrics = {
-        "accuracy:": accuracy,
-        "precision:": precision,
-        "recall:": recall,
-        "f1:": f1,
+        "accuracy": accuracy,
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
     }
 
     mlflow.log_metrics(metrics)
